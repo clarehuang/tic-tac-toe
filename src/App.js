@@ -169,14 +169,14 @@ const App = () => {
                   string = ""
               }
               return (
-                <div role="button" data-row={rowIndex} data-column={cellIndex} className="grid__cell" onClick={handleCellClick} key={cellIndex}>{string}</div>
+                <div role="button" aria-label="board-cell" data-row={rowIndex} data-column={cellIndex} className="grid__cell" onClick={handleCellClick} key={cellIndex}>{string}</div>
               )
             })}
           </div>
         })}
       </div>
-      <button className="button--reset" onClick={handleReset}>RESET</button>
-      <h1>{result}</h1>
+      <button className="button--reset" onClick={handleReset} aria-label="reset">RESET</button>
+      <h1 className="message">{result}</h1>
     </div>
   )
 }
